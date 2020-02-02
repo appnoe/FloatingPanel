@@ -253,6 +253,14 @@ open class FloatingPanelController: UIViewController {
 
         self.view = view as UIView
     }
+    
+    override open func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let gradient = CAGradientLayer()
+        gradient.frame = surfaceView.bounds
+        gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor]
+        surfaceView.layer.addSublayer(gradient)
+    }
 
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

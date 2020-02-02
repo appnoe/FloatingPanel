@@ -120,10 +120,6 @@ public class FloatingPanelSurfaceView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubViews()
-        let gradient = CAGradientLayer()
-        gradient.frame = bounds
-        gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor]
-        layer.addSublayer(gradient)
     }
 
     required public init?(coder aDecoder: NSCoder) {
