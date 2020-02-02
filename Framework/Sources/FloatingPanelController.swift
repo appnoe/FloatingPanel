@@ -256,6 +256,12 @@ open class FloatingPanelController: UIViewController {
 
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        let gradient = CAGradientLayer()
+        gradient.frame = floatingPanelController.surfaceView.bounds
+        gradient.colors = [UIColor.green.cgColor, UIColor.red.cgColor]
+
+        surfaceView.layer.addSublayer(gradient)
+
         if #available(iOS 11.0, *) {}
         else {
             // Because {top,bottom}LayoutGuide is managed as a view
