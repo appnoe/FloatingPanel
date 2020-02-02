@@ -215,6 +215,11 @@ public class FloatingPanelSurfaceView: UIView {
     private func updateBorder() {
         containerView.layer.borderColor = borderColor?.cgColor
         containerView.layer.borderWidth = borderWidth
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = bounds
+        gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor]
+        layer.addSublayer(gradient)
     }
 
     func add(contentView: UIView) {
