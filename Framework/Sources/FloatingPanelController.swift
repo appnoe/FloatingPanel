@@ -257,10 +257,10 @@ open class FloatingPanelController: UIViewController {
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         let gradient = CAGradientLayer()
-        gradient.frame = surfaceView.bounds
+        gradient.frame = backdropView.bounds
         gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor]
 
-        surfaceView.layer.addSublayer(gradient)
+        backdropView.layer.addSublayer(gradient)
 
         if #available(iOS 11.0, *) {}
         else {
