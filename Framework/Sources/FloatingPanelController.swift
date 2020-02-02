@@ -258,7 +258,7 @@ open class FloatingPanelController: UIViewController {
         super.viewDidLayoutSubviews()
         let gradient = CAGradientLayer()
         gradient.frame = surfaceView.bounds
-        gradient.colors = [UIColor.green.cgColor, UIColor.red.cgColor]
+        gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor]
 
         surfaceView.layer.addSublayer(gradient)
 
